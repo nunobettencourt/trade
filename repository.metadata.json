@@ -1,0 +1,14 @@
+{
+    "lifecycleStatus": "Production",
+    "description": "The service that serves administration pages for other services.",
+    "technologies": ["python", "JavaScript"],
+    "responsibleTeam":"PBS Frontend", 
+    "assetId":"BET",
+    "srijRelevant":"No",
+    "srijConfidentiality":"0",
+    "srijIntegrity":"0",
+    "srijAvailability":"0",
+    "srijTraceability":"0",
+    "hashes":"empty",
+    "createdOn":"23-01-2019"
+}
