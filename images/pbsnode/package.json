@@ -1,0 +1,58 @@
+{
+	"name": "pbsnode",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^3.9.2",
+		"@material-ui/icons": "^3.0.2",
+		"@material/layout-grid": "^0.41.0",
+		"axios": "^0.18.0",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
+		"react-redux": "^6.0.1",
+		"react-scripts": "2.1.5",
+		"redux": "^4.0.1",
+		"redux-devtools-extension": "^2.13.8",
+		"redux-thunk": "^2.3.0",
+		"serve": "^10.1.2"
+	},
+	"devDependencies": {
+		"@types/enzyme": "^3.9.0",
+		"@types/enzyme-adapter-react-16": "^1.0.5",
+		"@types/history": "^4.7.2",
+		"@types/jest": "^24.0.9",
+		"@types/material-ui": "^0.21.6",
+		"@types/node": "^11.10.4",
+		"@types/react": "^16.8.6",
+		"@types/react-dom": "^16.8.2",
+		"@types/react-redux": "^7.0.1",
+		"@types/react-test-renderer": "^16.8.1",
+		"enzyme": "^3.9.0",
+		"enzyme-adapter-react-16": "^1.10.0",
+		"enzyme-to-json": "^3.3.5",
+		"plop": "^2.3.0",
+		"react-test-renderer": "^16.8.4",
+		"typesafe-actions": "^3.2.1",
+		"typescript": "^3.3.3333"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"deploy": "npm run build && serve -s build -l 12000"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"jest": {
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		]
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"proxy": "http://localhost:12000"
+}
