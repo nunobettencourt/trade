@@ -1,0 +1,1 @@
+@ptadmin/react-component-to-npm-test
