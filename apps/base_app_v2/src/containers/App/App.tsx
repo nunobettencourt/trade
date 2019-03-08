@@ -1,36 +1,44 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-// import { AppState } from '../../store';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { createStyles, withStyles, WithStyles, Theme } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
-import "./App.css";
+const styles = (theme: Theme) => createStyles({
+  root: {
+    flexGrow: 1,
+  },
+	gray: {
+		padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.primary,
+	}
+});
 
-// import { AppsState } from "../../store/apps/types";
+export interface Props extends WithStyles<typeof styles> {}
 
-class App extends React.Component<any> {
+function App(props: any) {
 
-  componentWillMount() {
-    // this.props.fetch_apps();
-  }
+	const { classes } = props;
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>Multi-tenancy Admin Dockerised</p>
-        </header>
-      </div>
-    );
-  }
+	return (
+		<div className={classes.root}>
+			<Grid container spacing={0}>
+				<Grid item xs={12}>
+					<p className={classes.gray}>Header</p>
+				</Grid>
+				<Grid item xs={3}>
+					<p>Hierarchy</p>
+				</Grid>
+				<Grid item xs={9}>
+					<p>Main Content</p>
+				</Grid>
+			</Grid>
+		</div>
+	)
 }
 
-// const mapStateToProps = (state: AppState): AppsState => {
-  const mapStateToProps = (): any => {
-  return {
-    //apps: state.apps,
-  }
-};
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+} as any;
 
-export default connect(
-  mapStateToProps,
-  // { fetch_apps }
-)(App);
+export default withStyles(styles)(App);
