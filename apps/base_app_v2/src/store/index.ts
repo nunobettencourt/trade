@@ -5,9 +5,11 @@ import { composeWithDevTools } from "redux-devtools-extension"
 // import reducers
 import { hierNodesReducer } from "./hiernodes/reducers";
 import { userReducer } from "./user/reducers";
+import { currentItemReducer } from "./currentitem/reducers";
 
 const rootReducer = combineReducers({
   hierNodes: hierNodesReducer,
+  currentItem : currentItemReducer,
   user: userReducer,
 });
 
